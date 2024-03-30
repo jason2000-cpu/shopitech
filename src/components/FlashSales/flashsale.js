@@ -82,6 +82,9 @@ function FlashSale() {
                 })}
 
             </div>
+            <div className='flex justify-center '>
+                <button className='text-white bg-[#db4444] border rounded-[4px] h-[56px] w-[234px]'>View All Products</button>
+            </div>
         </div>
     </div>
   )

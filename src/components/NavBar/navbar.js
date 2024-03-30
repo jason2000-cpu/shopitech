@@ -2,7 +2,7 @@ import React from 'react'
 import Floatbanner from './floatbanner'
 import Link from 'next/link'
 
-const NavLinks = ['Home', 'Contact', 'About', 'Sign Up']
+const NavLinks = ['Home', 'Contact', 'About', 'Signup']
 function Navbar() {
   return (
     <div>
@@ -13,7 +13,7 @@ function Navbar() {
             </div>
             <div className='space-x-20 border'>
                 {NavLinks.map(nav => {
-                    return <Link href="#">{nav}</Link>
+                    return <Link href={`/${nav}`}>{nav}</Link>
                 })}
             </div>
             <div className='flex mr-5'>
