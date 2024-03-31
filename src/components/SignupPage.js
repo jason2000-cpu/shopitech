@@ -4,8 +4,8 @@ import Link from 'next/link'
 function SignupPage() {
   return (
     <div className='flex justify-between'>
-        <div className='border border-black w-[80%] h-[85vh]'>
-            pic
+        <div className='w-[80%] h-[85vh]'>
+            <img src='/static/images/signupBanner.png' alt='signup banner' className='h-[100%] w-[100%]' />
         </div>
         <div className='w-[50%] mx-10 my-2 pt-16 pl-4  '>
             <div className='space-y-8'>

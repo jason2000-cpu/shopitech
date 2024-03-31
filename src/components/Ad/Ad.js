@@ -23,7 +23,9 @@ function Ad() {
                 </div>
             </div>
             <div className='text-white  w-[45rem] flex items-center justify-center'>
-                <div className='h-[350px] w-[350px] border rounded-full  drop-shadow-2xl shadow-black bg-[#d9d9d977] blur-3xl'></div>
+                <div className='h-[350px] w-[350px] border rounded-full  drop-shadow-2xl shadow-black bg-[#d9d9d977] blur-3xl'>
+                </div>
+                <img src="/static/images/JBL_Speaker.png " className='absolute' alt='JBL speaker' />
             </div>
         </div>
     </div>

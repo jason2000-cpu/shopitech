@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
 
+import { IoIosArrowDown } from "react-icons/io";
+
 function Floatbanner() {
   return (
     <div className='bg-black text-white flex justify-evenly'>

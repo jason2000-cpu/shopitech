@@ -1,12 +1,15 @@
 import React from 'react'
+import { MdDelete, MdOutlineFavorite } from 'react-icons/md'
+import { MdOutlineFavoriteBorder } from 'react-icons/md'
 
-function Card({ item }) {
+function WishlistCard({ item }) {
   return (
     <div className='w-72 border rounded-xl mx-4'>
         <div className='bg-gray-100 p-2'>
-            <div className='flex justify-between'>
-                <span className='text-white bg-[#db4444] border rounded-md px-2 py-1'>{item.price_cut}</span>
-                <div>{item.favourite ? 'not fav': 'fav'}</div>
+            <div className='flex flex-col items-end'>
+                {/* <span className='text-white bg-[#db4444] border rounded-md px-2 py-1'>{item.price_cut}</span> */}
+                <div className='mb-4'>{item.favourite ? <MdOutlineFavorite size={25} color='#db4444' /> : <MdOutlineFavoriteBorder color='#db4444' size={25} /> }</div>
+                <div><MdDelete color='#db4444' size={25} /></div>
             </div>
             <div className='flex justify-center'>
                 {/* <img src="/static/images/no-image-icon.png" /> */}
@@ -25,4 +28,4 @@ function Card({ item }) {
   )
 }
 
-export default Card
+export default WishlistCard

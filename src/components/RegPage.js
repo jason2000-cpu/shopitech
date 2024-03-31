@@ -1,11 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 
+import { BsEyeSlash } from "react-icons/bs";
+import { IoEyeOutline } from "react-icons/io5";
+
 function RegPage() {
   return (
     <div className='flex justify-between'>
-        <div className='border border-black w-[80%] h-[85vh]'>
-            pic
+        <div className='w-[80%] h-[85vh]'>
+            <img src='/static/images/signupBanner.png' alt='signup banner' className='w-[100%] h-[100%]' />
         </div>
         <div className='w-[50%] mx-10 my-2 pt-4  '>
             <div className='space-y-8'>

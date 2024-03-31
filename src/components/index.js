@@ -9,6 +9,10 @@ import Ad from './Ad/Ad'
 import ServiceDel from './serviceDelivery/serviceDel'
 import Footer from './Footer/footer'
 
+
+// icon
+import { FaArrowUp } from "react-icons/fa6";
+
 function Index() {
   return (
     <div>

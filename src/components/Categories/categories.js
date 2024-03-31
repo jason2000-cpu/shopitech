@@ -2,7 +2,48 @@ import React from 'react'
 
 import CategoriesCard from './CategoriesCard';
 
-const categories =['Phones', 'Computers', 'SmartWatch', 'Camera', 'HeadPhones', 'Gaming'];
+// icons
+
+import { GiSmartphone } from "react-icons/gi";
+import { HiMiniComputerDesktop } from "react-icons/hi2";
+import { TbDeviceWatchStats } from "react-icons/tb";
+import { MdOutlineCameraAlt } from "react-icons/md";
+import { ImHeadphones } from "react-icons/im";
+import { TbDeviceGamepad } from "react-icons/tb";
+
+const categories = [
+    {
+        id: 1,
+        category_name: 'Phones',
+        icon: <GiSmartphone size={50}/>
+    },
+    {
+        id: 2,
+        category_name: 'Computers',
+        icon: <HiMiniComputerDesktop size={50}/>
+    },
+    {
+        id: 3,
+        category_name: 'SmartWatch',
+        icon: <TbDeviceWatchStats size={50}/>
+    },
+    {
+        id: 4,
+        category_name: 'Camera',
+        icon: <MdOutlineCameraAlt size={50}/>
+    },
+    {
+        id: 5,
+        category_name: 'HeadPhones',
+        icon: <ImHeadphones size={50}/>
+    },
+    {
+        id: 6,
+        category_name: 'Gaming',
+        icon: <TbDeviceGamepad size={50}/>
+    }
+
+]
 
 function Categories() {
   return (
@@ -22,7 +63,7 @@ function Categories() {
         </div>
         <div className='flex justify-between mt-6'>
             {categories.map(item =>{
-                return <CategoriesCard item={item} />
+                return <CategoriesCard key={item.id} item={item} />
             })}
 
         </div>
