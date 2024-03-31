@@ -25,7 +25,7 @@ function CartComp() {
                 <div className='my-10 space-y-4'>
                     <div className='flex justify-between px-8'>
                         <span>Subtotal:</span> 
-                        <span>ksh 1750</span>
+                        <span>ksh 37 000</span>
                     </div>
                     <hr></hr>
                     <div className='flex justify-between px-8'>
@@ -35,7 +35,7 @@ function CartComp() {
                     <hr></hr>
                     <div className='flex justify-between px-8'>
                         <span>Total:</span>
-                        <span>Ksh 1750</span>
+                        <span>Ksh 37 000</span>
                     </div>
                 </div>
                 <div className='flex justify-center'>
