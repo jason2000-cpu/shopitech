@@ -57,7 +57,7 @@ function Billing() {
         <div className='bank-pay'>
             <div className='flex justify-between'>
                 <div className='flex justify-evenly w-32'>
-                    <input type='radio' id='2' className='w-6' /> 
+                    <input type='radio'  name='option' id='2' className='w-6' /> 
                     <span className='text-xl'>Bank</span>
                 </div>
                 <div className='flex justify-evenly w-[20rem]'>
@@ -71,7 +71,7 @@ function Billing() {
 
         <div>
             <div className='flex justify-evenly w-48 my-4 ml-4 '>
-                <input type='radio' id='2' className='w-6' /> 
+                <input type='radio' name='option' id='2' className='w-6' /> 
                 <span className='text-xl'>Cash On Delivery</span>
             </div>
         </div>
