@@ -18,7 +18,7 @@ const billingItems = [
 ]
 function Billing() {
   return (
-    <div className='border border-black w-[627px] h-[600px] py-4 px-4'>
+    <div className='w-[627px] h-[600px] py-4 px-4'>
         <div className='space-y-8'>
             {billingItems.map(item =>{
                 return (

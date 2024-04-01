@@ -7,7 +7,7 @@ function CheckoutComp() {
   return (
     <div className='my-8 mx-4'>
         <div className='mx-16'>
-            <p>Home / Cart <span>/ Checkout</span></p>
+            <p>Home / Cart <span className='font-semibold'>/ Checkout</span></p>
         </div>
         <div className='mx-28 my-16'>
             <span className='text-3xl font-bold'>Billing Details</span>
