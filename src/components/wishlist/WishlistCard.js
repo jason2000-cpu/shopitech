@@ -8,7 +8,7 @@ function WishlistCard({ item }) {
         <div className='bg-gray-100 p-2'>
             <div className='flex flex-col items-end'>
                 {/* <span className='text-white bg-[#db4444] border rounded-md px-2 py-1'>{item.price_cut}</span> */}
-                <div className='mb-4'>{item.favourite ? <MdOutlineFavorite size={25} color='#db4444' /> : <MdOutlineFavoriteBorder color='#db4444' size={25} /> }</div>
+                {/* <div className='mb-4'>{item.favourite ? <MdOutlineFavorite size={25} color='#db4444' /> : <MdOutlineFavoriteBorder color='#db4444' size={25} /> }</div> */}
                 <div><MdDelete color='#db4444' size={25} /></div>
             </div>
             <div className='flex justify-center'>

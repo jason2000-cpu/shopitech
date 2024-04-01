@@ -14,7 +14,7 @@ const Categories = [
 ]
 function SideBar() {
   return (
-    <div className='flex flex-col border border-black px-12 w-80 h-[87vh] space-y-10 pt-12'>
+    <div className='flex flex-col border px-12 w-80 h-[87vh] space-y-10 pt-12 font-semibold'>
         {Categories.map(cat =>{
             return <Link href={cat}>{cat}</Link>
         })}

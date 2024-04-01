@@ -5,14 +5,17 @@ import Link from 'next/link';
 import React from 'react'
 
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { GrCycle } from "react-icons/gr";
+import { TbTruckDelivery } from "react-icons/tb";
+
 
 function ProductView() {
   return (
-    <div>
+    <div className='mt-[6.5rem]'>
         <Navbar />
-        <div>
+        <div className='px-10 pt-10'>
             <div>
-                <p>Home / <span> GamePad</span></p>
+                <p>Home / <span className='font-semibold'> GamePad</span></p>
             </div>
             <div className='flex justify-evenly my-10'>
                 <div className='flex justify-between w-[700px]'>
@@ -48,8 +51,8 @@ function ProductView() {
 
                     <div className='space-x-4'>
                         <span className='text-xl'>Colours:</span>
-                        <input type='radio' name='color'  />
-                        <input type='radio' name='color' />
+                        <input type='radio' className='w-[20px] h-[25px] relative' name='color'  />
+                        <input type='radio' className='w-[50px] h-[25px] relative' name='color' />
                     </div>
 
                     <div className='flex justify-between items-center w-[296px] h-[32px]'>
@@ -78,7 +81,7 @@ function ProductView() {
                     <div className='border border-black space-y-4 p-4'>
                         <div className='flex space-x-12 items-center'>
                             <div>
-                                Icon
+                                <TbTruckDelivery />
                             </div>
                             <div className='flex flex-col'>
                                 <span className='text-xl font-semibold'>Free Delivery</span>
@@ -88,7 +91,7 @@ function ProductView() {
                         <hr></hr>
                         <div className='flex space-x-12 items-center'>
                             <div>
-                                Icon
+                                <GrCycle />
                             </div>
                             <div>
                                 <span className='text-xl font-semibold'>Return Delivery</span>

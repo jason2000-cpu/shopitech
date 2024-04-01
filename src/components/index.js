@@ -17,7 +17,7 @@ function Index() {
   return (
     <div>
         <Navbar />
-        <div className='flex'>
+        <div className='flex pt-[6.5rem]'>
         <SideBar />
         <Featured />
         </div>
@@ -28,6 +28,9 @@ function Index() {
         <RecentlyViewd />
         <Ad />
         <ServiceDel />
+        {/* <div className='relative flex justify-end my-10 mx-16'>
+            <FaArrowUp   className='cursor-pointer' size={30}/>
+        </div> */}
         <Footer />
     </div>
   )

@@ -1,4 +1,5 @@
 import React from 'react'
+import AdCountDown from '../Countdown/AdCountDown'
 
 function Ad() {
   return (
@@ -13,12 +14,14 @@ function Ad() {
                             <p>Music Experience</p>
                         </span>
                     </div>
-                    <div className='flex justify-between w-[25rem] text-sm'>
+                    <AdCountDown />
+
+                    {/* <div className='flex justify-between w-[25rem] text-sm'>
                         <span className='bg-white border rounded-full h-20 w-20 flex flex-col justify-center items-center'><span className='text-2xl'>23</span>Days</span>
                         <span className='bg-white border rounded-full h-20 w-20 flex flex-col justify-center items-center'><span className='text-2xl'>05</span>Hours</span>
                         <span className='bg-white border rounded-full h-20 w-20 flex flex-col justify-center items-center'><span className='text-2xl'>59</span>Minutes</span>
                         <span className='bg-white border rounded-full h-20 w-20 flex flex-col justify-center items-center'><span className='text-2xl'>35</span>Seconds</span>
-                    </div>
+                    </div> */}
                     <button className='bg-[#00ff66] rounded w-[171px] h-[56px]'>Buy Now!</button>
                 </div>
             </div>

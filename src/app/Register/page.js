@@ -6,7 +6,7 @@ import React from 'react'
 
 function Register() {
   return (
-    <div>
+    <div className='mt-[6.5rem]'>
         <Navbar />
         <RegPage />
         <Footer />

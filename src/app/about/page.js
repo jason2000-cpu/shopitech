@@ -7,7 +7,7 @@ import ServiceDel from '@/components/serviceDelivery/serviceDel'
 
 function About_page() {
   return (
-    <div>
+    <div className='mt-[6.5rem]'>
         <Navbar />
         <div className='flex justify-between items-center'>
             <div className='w-[525px] h-[336px] ml-20 p-4 space-y-6'>

@@ -13,10 +13,10 @@ function SignupPage() {
                 <h4>Enter your details below</h4>
                 <div className=' space-y-4'>
                     <div className='h-10'>
-                        <input className='border border-b-4 w-[30rem]' type='text' placeholder='Phone' />
+                        <input className='w-[30rem] border-b-4 focus:outline-none focus:border-b-4' type='text' placeholder='Phone' />
                     </div>
                     <div className='h-10'>
-                        <input className='border border-b-4 w-[30rem]' type='text' placeholder='Password' />
+                        <input className='w-[30rem] border-b-4 focus:outline-none focus:border-b-4' type='text' placeholder='Password' />
                     </div>
 
                     <div className='flex justify-end'>

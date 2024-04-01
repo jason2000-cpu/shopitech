@@ -5,7 +5,7 @@ const wishlistItems = [
     {
         id: 1,
         price_cut: '-40%',
-        favourite: false,
+        favourite: true,
         pic: '/static/images/G92_GamePad.png',
         item_name: 'Havit HV-G92 Gamepad',
         initial_price: 'ksh 160',
@@ -25,7 +25,7 @@ const wishlistItems = [
     {
         id: 3,
         price_cut: '-30%',
-        favourite: false,
+        favourite: true,
         pic: '/static/images/Gaming_Monitor.png',
         item_name: 'IPS LCD Gaming Monitor',
         initial_price: 'Ksh 50 000',

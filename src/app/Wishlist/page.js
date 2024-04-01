@@ -5,7 +5,7 @@ import ItemsWishlist from '../../components/wishlist/ItemsWishlist'
 
 function Wishlist() {
   return (
-    <div>
+    <div className='mt-[7rem]'>
         <Navbar />
         <ItemsWishlist />
         <Footer />

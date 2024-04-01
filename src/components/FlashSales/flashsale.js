@@ -5,6 +5,7 @@ import Card from './card'
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { MdAddShoppingCart } from "react-icons/md";
+import FlashSaleCountDown from '../Countdown/FlashSaleCountDown';
 
 
 const flashsales = [ 
@@ -49,6 +50,9 @@ const flashsales = [
         rating: '99'
     }
 ]
+
+
+
 function FlashSale() {
   return (
     <div>
@@ -59,27 +63,7 @@ function FlashSale() {
             </div>
             <div className='flex mt-6 justify-around'>
                 <p className='text-4xl'>Flash Sales</p>
-                <div className='flex text-xl space-x-8'>
-                    <div className='flex flex-col justify-between items-center h-16'>
-                        <p className='text-sm'>Days</p>
-                        <p className='text-3xl'>03</p>
-                    </div>
-                    <span className='flex items-end h-14 text-2xl'>:</span>
-                    <div className='flex flex-col  justify-between items-center'>
-                        <p className='text-sm'>Hours</p>
-                        <p className='text-3xl'>23</p>
-                    </div>
-                    <span className='flex items-end h-14 text-2xl'>:</span>
-                    <div className='flex flex-col justify-between items-center'>
-                        <p className='text-sm'>Minutes</p>
-                        <p className='text-3xl'>19</p>
-                    </div>
-                    <span className='flex items-end h-14 text-2xl'>:</span>
-                    <div className='flex flex-col justify-between items-center'>
-                        <p className='text-sm'>Seconds</p>
-                        <p className='text-3xl'>56</p>
-                    </div>
-                </div>
+                <FlashSaleCountDown />
                 <div className='flex justify-between'>
                     <div className='border rounded-full h-10 w-10 bg-[#f5f5f5] flex justify-center items-center mr-2 text-2xl'>  {'<'} </div>
                     <div className='border rounded-full h-10 w-10 bg-[#f5f5f5] flex justify-center items-center text-2xl'>&gt;</div>
