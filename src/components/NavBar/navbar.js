@@ -40,8 +40,10 @@ function Navbar() {
     <div className='fixed z-10 bg-white w-[100vw] top-0 left-0'>
         <Floatbanner />
         <div className='flex justify-between h-20 items-center px-8 shadow-lg'>
-            <div className='border'>
-                <span className=''>LOGO</span>
+            <div>
+                <span className=''>
+                    <img src='/static/images/logo.png' alt='SHOPITECH' className='w-24 h-[4.8rem]' />
+                </span>
             </div>
             <div className='space-x-20 text-[18px]'>
                 {NavLinks.map(nav => {

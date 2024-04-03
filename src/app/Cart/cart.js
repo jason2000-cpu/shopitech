@@ -1,6 +1,9 @@
 import React from 'react'
 
+import Link from 'next/link'
+
 import Table from '@/components/Table/table'
+
 
 
 function CartComp() {
@@ -39,7 +42,9 @@ function CartComp() {
                     </div>
                 </div>
                 <div className='flex justify-center'>
-                    <button className='bg-[#db4444] mx-4 my-2 text-white w-[260px] h-[56px] border rounded font-bold'>Process to checkout</button>
+                    <button className='bg-[#db4444] mx-4 my-2 text-white w-[260px] h-[56px] border rounded font-bold'>
+                        <Link href="/checkout">Proceed to Checkout</Link>
+                    </button>
                 </div>
             </div>
         </div>
