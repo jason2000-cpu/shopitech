@@ -20,7 +20,9 @@ function SignupPage() {
                     </div>
 
                     <div className='flex justify-end'>
-                        <span className='text-[#db4444]'>Forgot password ?</span>
+                        <span className='text-[#db4444]'>
+                            <Link href="/reset">Forgot password ?</Link>
+                        </span>
                     </div>
 
                     <div className='flex flex-col items-center my-4'>

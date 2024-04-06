@@ -28,10 +28,10 @@ function Featured() {
                 </div>
             </div>
             <div className='flex justify-center mt-10'>
-                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-white'></span>
-                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-white'></span>
-                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-white bg-pink-600'></span>
-                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-white'></span>
+                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-[#db4444]'></span>
+                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-[#db4444]'></span>
+                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-[#db4444] bg-[#db4444]'></span>
+                <span className='mx-2 cursor-pointer h-4 w-4 rounded-full border border-[#db4444]'></span>
             </div>
         </div>
 
