@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Card from './card'
 
@@ -6,6 +8,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { MdAddShoppingCart } from "react-icons/md";
 import FlashSaleCountDown from '../Countdown/FlashSaleCountDown';
+import MyCarousel from './MyCarousel';
 
 
 const flashsales = [ 
@@ -80,6 +83,9 @@ function FlashSale() {
                 <button className='text-white bg-[#db4444] border rounded-[4px] h-[56px] w-[234px]'>View All Products</button>
             </div>
         </div>
+
+        <MyCarousel  />
+
     </div>
   )
 }

@@ -2,6 +2,11 @@ import React from 'react'
 
 
 import { MdOutlineFavoriteBorder } from "react-icons/md";
+import { CiStar } from "react-icons/ci";
+import { ImStarEmpty } from "react-icons/im";
+import { ImStarFull } from "react-icons/im";
+import { ImStarHalf } from "react-icons/im";
+
 
 function Card({ item }) {
   return (
@@ -23,7 +28,7 @@ function Card({ item }) {
             <span className='text-lg '>{item.item_name}</span>
             <div>
                 <span className='text-[#db4444]'>{item.current_price} </span>
-                <span>{item.initial_price}</span>
+                <span className='line-through'>{item.initial_price}</span>
             </div>
             <span>Rating {item.rating}</span>
         </div>

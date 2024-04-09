@@ -5,11 +5,11 @@ import { FaArrowLeft } from "react-icons/fa6";
 
 function Featured() {
   return (
-    <div className='flex justify-center border borer-black w-[100%]'>
-        <div className='bg-black h-[70vh] w-[75vw] mx-6 border my-10 text-white px-10 py-16'>
+    <div className='flex justify-center border borer-black w-[100%] max-sm:flex-none'>
+        <div className='bg-black h-[70vh] w-[75vw]  mx-6 border my-10 text-white px-10 py-16'>
             <div className='flex justify-between'>
-                <div className='flex flex-col space-y-24'>
-                    <div className='flex items-center'>
+                <div className='flex flex-col space-y-24 max-sm:flex-none'>
+                    <div className='flex items-center max-sm:flex-none'>
                         <span>
                             <img src='/static/images/apple_icon.png' alt='apple icon' />
                         </span>
