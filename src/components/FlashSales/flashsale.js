@@ -1,7 +1,9 @@
 'use client'
 
-import React from 'react'
+import React, {useContext } from 'react'
 import Card from './card'
+
+import useProductRest from '@/Hooks/useProductRest';
 
 // icons
 import { FaArrowRight } from "react-icons/fa6";
@@ -57,6 +59,9 @@ const flashsales = [
 
 
 function FlashSale() {
+
+    const products = useProductRest();
+
   return (
     <div>
         <div className='mx-12 my-16'>
@@ -74,8 +79,8 @@ function FlashSale() {
             </div>
             {/* Flash Sale Cards */}
             <div className='flex justify-evenly my-10'>
-                { flashsales.map(item =>{
-                    return <Card key={item.id} item={item} />
+                { products.map(product =>{
+                    return <Card key={product.id} product={product} />
                 })}
 
             </div>
