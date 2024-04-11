@@ -1,6 +1,6 @@
 'use client'
 
-import React, {useContext } from 'react'
+import React, {useContext, useEffect, useState } from 'react'
 import Card from './card'
 
 import useProductRest from '@/Hooks/useProductRest';
@@ -19,7 +19,7 @@ const flashsales = [
         price_cut: '-40%',
         favorite: true,
         pic: '/static/images/G92_GamePad.png',
-        item_name: 'Havit HV-G92 Gamepad',
+        name: 'Havit HV-G92 Gamepad',
         initial_price: 'ksh 160',
         current_price: 'Ksh 120',
         rating: '88'
@@ -29,7 +29,7 @@ const flashsales = [
         price_cut: '-36%',
         favorite: false,
         pic: '/static/images/AK_Keyboard.png',
-        item_name: 'AK-900 Wired Keyboard',
+        name: 'AK-900 Wired Keyboard',
         initial_price: 'Ksh 1160',
         current_price: 'Ksh 960',
         rating: '75'
@@ -39,7 +39,7 @@ const flashsales = [
         price_cut: '-30%',
         favorite: false,
         pic: '/static/images/Gaming_Monitor.png',
-        item_name: 'IPS LCD Gaming Monitor',
+        name: 'IPS LCD Gaming Monitor',
         initial_price: 'Ksh 50 000',
         current_price: 'Ksh 45, 000',
         rating: '99'
@@ -49,7 +49,7 @@ const flashsales = [
         price_cut: '-25%',
         favourite: false,
         pic: '/static/images/Comfort_Chair.png',
-        item_name: 'S-Series Comfort Chair',
+        name: 'S-Series Comfort Chair',
         initial_price: 'Ksh 15 000',
         current_price: 'Ksh 13 500',
         rating: '99'
@@ -60,7 +60,6 @@ const flashsales = [
 
 function FlashSale() {
 
-    const products = useProductRest();
 
   return (
     <div>
@@ -79,8 +78,8 @@ function FlashSale() {
             </div>
             {/* Flash Sale Cards */}
             <div className='flex justify-evenly my-10'>
-                { products.map(product =>{
-                    return <Card key={product.id} product={product} />
+                { flashsales.map(item =>{
+                    return <Card key={item.id} item={item} />
                 })}
 
             </div>
