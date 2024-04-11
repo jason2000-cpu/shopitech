@@ -1,7 +1,6 @@
 'use client'
 
-import React, { useContext } from 'react'
-import { AppContext } from '@/app/page'
+import React from 'react'
 import Floatbanner from './floatbanner'
 import Link from 'next/link'
 
@@ -37,8 +36,7 @@ const NavLinks = [
     }
 ]
 function Navbar() {
-    const context = useContext(AppContext);
-    console.log(context.cartItems)
+    // console.log(context.cartItems)
 
   return (
     <div className='fixed z-10 bg-white w-[100vw] top-0 left-0'>
@@ -63,13 +61,13 @@ function Navbar() {
                     <div className='cursor-pointer'>
                         <Link href='/Wishlist'>
                             <MdOutlineFavoriteBorder size={30} /> 
-                            <span className='absolute top-10 right-32 bg-[#db4444] border rounded-full h-4 w-4 p-2  flex justify-center items-center'>{context.favorites}</span>
+                            <span className='absolute top-10 right-32 bg-[#db4444] border rounded-full h-4 w-4  p-[.6rem]  flex justify-center items-center text-white '>0</span>
                         </Link>
                     </div>
                     <div className='cursor-pointer'>
                         <Link href='/Cart'>
                             <HiOutlineShoppingCart size={30}/>
-                            <span className='absolute top-10 right-20 bg-[#db4444] border rounded-full h-4 w-4 p-2  flex justify-center items-center'>{context.cartItems}</span>
+                            <span className='absolute top-10 right-20 bg-[#db4444] border rounded-full h-4 w-4 p-[.6rem]  flex justify-center items-center text-white'>0</span>
                         </Link>
                     </div>
                     <Dropdown />

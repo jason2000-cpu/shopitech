@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Navbar from './NavBar/navbar'
 import SideBar from './SideBar/sidebar'
