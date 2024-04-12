@@ -12,7 +12,7 @@ function Card({ item }) {
    const { setCart, cart } = useCart();
 
    const addToCart = ()=>{
-     setCart([...cart, item]);
+     setCart((prevCart) =>[...prevCart, item]);
      alert('item added to Cart')
    }
 
