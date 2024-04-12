@@ -8,22 +8,32 @@ const baseUrl = 'https://fakestoreapi.com';
 
 function useProductRest() {
     const [products, setProducts ] = useState([]);
-
+    const [productsLoading, setLoading] = useState(true);
 
     useEffect(()=>{
         async function getProducts(){
             try {
-                const response = await fetch(`${baseUrl}/products?limit=5`)
-                setProducts(response.data);
-                console.log("RESPONSE DATA", response.data);
-            } catch(err) {
-                console.log(`${err} occured while fetching products`)
+                await fetch('/api/products')
+                .then(res => res.json())
+                .then(json =>{
+                    console.log("JSON OUTPUT:::::",json);
+                    setProducts(json);
+                    setLoading(false);
+                })
+            } catch (error) {
+                setLoading(false);
+                console.log(error, "Occured while fetching products");
             }
         }
-        getProducts();
-    }, [products])
 
-    return products;
+        getProducts();
+        
+    }, [])
+    
+
+    console.log(products);
+    return {products, productsLoading};
 }
+
 
 export default useProductRest;

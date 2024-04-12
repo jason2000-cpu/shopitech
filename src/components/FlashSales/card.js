@@ -5,10 +5,17 @@ import { CiStar } from "react-icons/ci";
 import { ImStarEmpty } from "react-icons/im";
 import { ImStarFull } from "react-icons/im";
 import { ImStarHalf } from "react-icons/im"
+import useCart from '@/Hooks/useCart';
 
 
 function Card({ item }) {
-  
+   const { setCart, cart } = useCart();
+
+   const addToCart = ()=>{
+     setCart([...cart, item]);
+     alert('item added to Cart')
+   }
+
   return (
     <div className='w-72 border rounded-xl mx-4'>
         <div className='bg-gray-100 p-2'>
@@ -18,16 +25,16 @@ function Card({ item }) {
             </div>
             <div className='flex justify-center'>
                 {/* <img src="/static/images/no-image-icon.png" /> */}
-                <img src={item.pic} alt={item.name} />
+                <img src={item.image_path} alt={item.name} />
             </div>
         </div>
-        <div className='border flex justify-center items-center bg-black text-white rounded cursor-pointer h-[41px]'>
+        <div className='border flex justify-center items-center bg-black text-white rounded cursor-pointer h-[41px]' onClick={addToCart}>
             <span>Add to Cart</span>
         </div>
         <div className='p-2'>
             <span className='text-lg '>{item.name}</span>
             <div>
-                <span className='text-[#db4444]'>{item.current_price} </span>
+                <span className='text-[#db4444]'>{item.price} </span>
                 <span className='line-through'>{item.initial_price}</span>
             </div>
             <span>Rating {item.rating}</span>

@@ -13,53 +13,9 @@ import FlashSaleCountDown from '../Countdown/FlashSaleCountDown';
 import MyCarousel from './MyCarousel';
 
 
-const flashsales = [ 
-    {
-        id: 1,
-        price_cut: '-40%',
-        favorite: true,
-        pic: '/static/images/G92_GamePad.png',
-        name: 'Havit HV-G92 Gamepad',
-        initial_price: 'ksh 160',
-        current_price: 'Ksh 120',
-        rating: '88'
-    },
-    {
-        id: 2,
-        price_cut: '-36%',
-        favorite: false,
-        pic: '/static/images/AK_Keyboard.png',
-        name: 'AK-900 Wired Keyboard',
-        initial_price: 'Ksh 1160',
-        current_price: 'Ksh 960',
-        rating: '75'
-    },
-    {
-        id: 3,
-        price_cut: '-30%',
-        favorite: false,
-        pic: '/static/images/Gaming_Monitor.png',
-        name: 'IPS LCD Gaming Monitor',
-        initial_price: 'Ksh 50 000',
-        current_price: 'Ksh 45, 000',
-        rating: '99'
-    },
-    {
-        id: 4,
-        price_cut: '-25%',
-        favourite: false,
-        pic: '/static/images/Comfort_Chair.png',
-        name: 'S-Series Comfort Chair',
-        initial_price: 'Ksh 15 000',
-        current_price: 'Ksh 13 500',
-        rating: '99'
-    }
-]
-
-
-
 function FlashSale() {
 
+    const { products, productsLoading } = useProductRest();
 
   return (
     <div>
@@ -78,9 +34,11 @@ function FlashSale() {
             </div>
             {/* Flash Sale Cards */}
             <div className='flex justify-evenly my-10'>
-                { flashsales.map(item =>{
+                { productsLoading ? <h2>Items Loading</h2> : (
+                    products.map(item =>{
                     return <Card key={item.id} item={item} />
-                })}
+                })
+                )}
 
             </div>
             <div className='flex justify-center '>
