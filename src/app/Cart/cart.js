@@ -1,17 +1,25 @@
-import React from 'react'
+'use client'
+
+import React, { useContext } from 'react'
 
 import Link from 'next/link'
 
 import Table from '@/components/Table/table'
+import { AppContext } from '@/Context/AppContext'
 
 
 
 function CartComp() {
+    const { cart } = useContext(AppContext);
+
   return (
     <div className='mx-10'>
         <div className='mt-16 text-[19px]'>Home <span className='font-bold'> /Cart</span></div>
 
-        <Table />
+        {
+            cart.length <= 0 ? <div className='flex items-center justify-center'>EMPTY CART!!</div> :
+            <Table />
+        }
 
         <div className='flex justify-between w-[80vw] ml-10 mb-8 font-bold'>
             <button className='border rounded   p-4 w-[218px] h-[56px] hover:bg-[#db4444] hover:text-white'>Return to Shop</button>
@@ -48,7 +56,6 @@ function CartComp() {
                 </div>
             </div>
         </div>
-
     </div>
   )
 }

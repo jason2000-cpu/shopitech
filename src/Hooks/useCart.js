@@ -25,8 +25,13 @@ function useCart(){
     // }, [])
 
     const addToCart = (item)=>{
-        setCart((prevCart) => [...prevCart, item])
-        alert(`${item.name} added to Cart. New Length::`, cart.length)
+        const checkExist  = cart.filter((cartItem) => cartItem.id === item.id)
+        if (checkExist != false){
+          alert(`${item.name} Already exists`)
+        } else {
+          setCart((prevCart) => [...prevCart, item])
+          alert(`${item.name} added to Cart. New Length::`, cart.length)
+        }
       }
 
     return { cart, cartLoading, addToCart }

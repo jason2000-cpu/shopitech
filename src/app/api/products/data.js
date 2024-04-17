@@ -5,8 +5,8 @@ export const flashsales = [
         favorite: true,
         image_path: '/static/images/G92_GamePad.png',
         name: 'Havit HV-G92 Gamepad',
-        initial_price: 'ksh 160',
-        price: '120',
+        initial_price: 160,
+        price: 120,
         rating: '100'
     },
     {
@@ -15,8 +15,8 @@ export const flashsales = [
         favorite: false,
         image_path: '/static/images/AK_Keyboard.png',
         name: 'AK-900 Wired Keyboard',
-        initial_price: 'Ksh 1160',
-        price: '960',
+        initial_price: 1160,
+        price: 960,
         rating: '75'
     },
     {
@@ -25,8 +25,8 @@ export const flashsales = [
         favorite: false,
         image_path: '/static/images/Gaming_Monitor.png',
         name: 'IPS LCD Gaming Monitor',
-        initial_price: 'Ksh 50 000',
-        current_price: 'Ksh 45, 000',
+        initial_price: 50000,
+        price: 45000,
         rating: '99'
     },
     {
@@ -35,8 +35,8 @@ export const flashsales = [
         favourite: false,
         image_path: '/static/images/Comfort_Chair.png',
         name: 'S-Series Comfort Chair',
-        initial_price: 'Ksh 15 000',
-        current_price: 'Ksh 13 500',
+        initial_price: 15000,
+        price: 13500,
         rating: '99'
     }
 ]
@@ -49,8 +49,8 @@ export const cart =[
         favorite: true,
         image_path: '/static/images/G92_GamePad.png',
         name: 'Havit HV-G92 Gamepad',
-        initial_price: 'ksh 160',
-        price: '120',
+        initial_price: 160,
+        price: 120,
         rating: '100'
     },
     {
@@ -59,8 +59,8 @@ export const cart =[
         favorite: false,
         image_path: '/static/images/AK_Keyboard.png',
         name: 'AK-900 Wired Keyboard',
-        initial_price: 'Ksh 1160',
-        price: '960',
+        initial_price: 1160,
+        price: 960,
         rating: '75'
     },
     {
@@ -69,8 +69,8 @@ export const cart =[
         favourite: false,
         image_path: '/static/images/Comfort_Chair.png',
         name: 'S-Series Comfort Chair',
-        initial_price: 'Ksh 15 000',
-        price: '13500',
+        initial_price: 15000,
+        price: 13500,
         rating: '99'
     }
 ]

@@ -1,4 +1,7 @@
-import React from 'react'
+'use client'
+
+import { AppContext } from '@/Context/AppContext'
+import React,{ useContext } from 'react'
 
 const billingItems = [
     {
@@ -17,14 +20,16 @@ const billingItems = [
     }
 ]
 function Billing() {
+    const { cart } = useContext(AppContext);
+
   return (
     <div className='w-[627px] h-[600px] py-4 px-4'>
         <div className='space-y-8'>
-            {billingItems.map(item =>{
+            {cart.map(item =>{
                 return (
                     <div key={item.id} className='flex justify-between mx-10'>
                         <div className='flex'>
-                            <img src={item.img_path} alt={item.name} className='w-[54px] h-[54px] mr-6' />
+                            <img src={item.image_path} alt={item.name} className='w-[54px] h-[54px] mr-6' />
                             <span>{item.name}</span>
                         </div>
                         <div>

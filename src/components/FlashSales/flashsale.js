@@ -1,21 +1,20 @@
 'use client'
 
+import { useContext } from 'react';
+import { AppContext } from '@/Context/AppContext';
 import Card from './card'
-
-import useProductRest from '@/Hooks/useProductRest';
-import useCart from '@/Hooks/useCart';
 
 // icons
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import { MdAddShoppingCart } from "react-icons/md";
 import FlashSaleCountDown from '../Countdown/FlashSaleCountDown';
-import MyCarousel from './MyCarousel';
+
 
 
 function FlashSale() {
 
-    const { products, productsLoading } = useProductRest();
+    const { products, productsLoading } = useContext(AppContext);
 
   return (
     <div>
@@ -45,9 +44,6 @@ function FlashSale() {
                 <button className='text-white bg-[#db4444] border rounded-[4px] h-[56px] w-[234px]'>View All Products</button>
             </div>
         </div>
-
-        <MyCarousel  />
-
     </div>
   )
 }

@@ -38,12 +38,8 @@ const NavLinks = [
     }
 ]
 function Navbar() {
-    // console.log(context.cartItems)
     const { cart } = useContext(AppContext)
-    // console.log("NAVBAR CART CONTEXT:::::", AppContext.Provider);
-    // const { cart } = useCart();
 
-    console.log("CART FROM LOCAL STORAGE::::", cart.length);
   return (
     <div className='fixed z-10 bg-white w-[100vw] top-0 left-0'>
         <Floatbanner />

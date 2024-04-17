@@ -5,7 +5,7 @@ import CartComp from './cart'
 
 function Cart() {
   return (
-    <div>
+    <div className='mt-[8rem]'>
         <CartComp />
         <Footer />
     </div>
