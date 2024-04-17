@@ -6,7 +6,6 @@ import SignupPage from '@/components/SignupPage'
 function Signup() {
   return (
     <div className='mt-[6.5rem]'>
-        <Navbar />
         <SignupPage />
         <Footer />
     </div>

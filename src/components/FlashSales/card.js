@@ -6,15 +6,13 @@ import { ImStarEmpty } from "react-icons/im";
 import { ImStarFull } from "react-icons/im";
 import { ImStarHalf } from "react-icons/im"
 import useCart from '@/Hooks/useCart';
+import useProductRest from '@/Hooks/useProductRest';
+import { AppContext } from '@/Context/AppContext';
 
 
 function Card({ item }) {
-   const { setCart, cart } = useCart();
-
-   const addToCart = ()=>{
-     setCart((prevCart) =>[...prevCart, item]);
-     alert('item added to Cart')
-   }
+    const appContext = useContext(AppContext);
+    const { addToCart } = appContext;
 
   return (
     <div className='w-72 border rounded-xl mx-4'>
@@ -28,7 +26,7 @@ function Card({ item }) {
                 <img src={item.image_path} alt={item.name} />
             </div>
         </div>
-        <div className='border flex justify-center items-center bg-black text-white rounded cursor-pointer h-[41px]' onClick={addToCart}>
+        <div className='border flex justify-center items-center bg-black text-white rounded cursor-pointer h-[41px]' onClick={()=>addToCart(item)}>
             <span>Add to Cart</span>
         </div>
         <div className='p-2'>

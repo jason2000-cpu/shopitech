@@ -1,9 +1,9 @@
 'use client'
 
-import React, {useContext, useEffect, useState } from 'react'
 import Card from './card'
 
 import useProductRest from '@/Hooks/useProductRest';
+import useCart from '@/Hooks/useCart';
 
 // icons
 import { FaArrowRight } from "react-icons/fa6";
@@ -36,7 +36,7 @@ function FlashSale() {
             <div className='flex justify-evenly my-10'>
                 { productsLoading ? <h2>Items Loading</h2> : (
                     products.map(item =>{
-                    return <Card key={item.id} item={item} />
+                    return <Card key={item.id} item={item}  />
                 })
                 )}
 

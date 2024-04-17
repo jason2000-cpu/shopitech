@@ -4,29 +4,32 @@ import React, { useState, useEffect, useId } from 'react';
 
 
 function useCart(){
-    const [ cart, setCart ] = useState([]);
-    const [ cartLoading, setLoading ] = useState(true)
+    const [cart, setCart] = useState([]);
+    const [cartLoading, setLoading] = useState(true)
     const [userId, setUserId] = useState('')
 
-    useEffect(()=>{
-        async function getCartItems(userId){
-            try{
-                await fetch('/api/products/cart')
-                .then(res => res.json())
-                .then(json =>{
-                    setCart(json);
-                    console.log("FROM useCart HOOK:::::::",json)
-                    setLoading(false);
-                })
-            } catch (error) {
-                setLoading(false);
-                console.log(`${error}. Occured while getting Cart Items`)
-            }
-        }
-        getCartItems(useId)
-    }, [])
+    // useEffect(()=>{
+    //     async function getCartItems(){
+    //         try{
+    //             const response = await fetch('/api/products/cart')
+    //             const cartData = await response.json();
+    //             setCart(cartData);
+    //             setLoading(false);
+    //         } catch (error) {
+    //             setLoading(false);
+    //             console.log(`${error}. Occured while getting Cart Items`)
+    //         }
+    //     }
+    //     getCartItems();
 
-    return { cart, cartLoading, setCart }
+    // }, [])
+
+    const addToCart = (item)=>{
+        setCart((prevCart) => [...prevCart, item])
+        alert(`${item.name} added to Cart. New Length::`, cart.length)
+      }
+
+    return { cart, cartLoading, addToCart }
 
 }
 

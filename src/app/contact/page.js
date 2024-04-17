@@ -7,7 +7,6 @@ import ContactForm from './mini-components/ContactForm'
 function Contact_Page() {
   return (
     <div className='pt-[6.5rem]'>
-        <Navbar />
         <div className='mt-10 ml-10'>
             <div>
                 <p>Home / <span className='font-bold'>Contact</span></p>

@@ -7,7 +7,6 @@ import ProfileEdit from './mini-components/profileEdit'
 function UserAccount() {
   return (
     <div className='mt-[7.5rem]'>
-        <Navbar />
         <div className='mx-24 my-4'>
             <div className='flex justify-between '>
                 <div>

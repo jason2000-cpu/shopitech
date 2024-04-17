@@ -1,10 +1,15 @@
 'use client'
 
-import useCart from '@/Hooks/useCart'
+import React, { useContext } from 'react';
+import { AppContext } from '@/Context/AppContext';
 import ItemRow from './ItemRow';
+import useCart from '@/Hooks/useCart';
 
 function Table() {
-    const { cart } = useCart();
+    // const { cart } = useCart();
+    const { cart } = useContext(AppContext);
+
+    console.log("CART ITEMS FROM TABLE::::", cart);
 
   return (
     <div className="overflow-x-auto">

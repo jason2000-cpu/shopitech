@@ -6,7 +6,6 @@ import CheckoutComp from './checkout'
 function Checkout() {
   return (
     <div>
-        <Navbar />
         <CheckoutComp />
         <Footer />
     </div>

@@ -7,7 +7,6 @@ import { TiArrowSortedUp } from "react-icons/ti";
 
 
 function ItemRow({ item }) {
-    console.log("FROM ITEM ROW::::::",item)
     const [ subtotal, setSubtotal ] = useState(item.price);
     const [ quantity, setQuantity ] = useState(1);
 

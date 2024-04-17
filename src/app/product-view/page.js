@@ -12,7 +12,6 @@ import { TbTruckDelivery } from "react-icons/tb";
 function ProductView() {
   return (
     <div className='mt-[6.5rem]'>
-        <Navbar />
         <div className='px-10 pt-10'>
             <div>
                 <p>Home / <span className='font-semibold'> GamePad</span></p>

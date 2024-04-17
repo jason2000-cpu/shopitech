@@ -6,7 +6,6 @@ import CartComp from './cart'
 function Cart() {
   return (
     <div>
-        <Navbar />
         <CartComp />
         <Footer />
     </div>

@@ -17,7 +17,6 @@ function PasswdReset() {
 
   return (
     <div className='mt-[10rem]'>
-        <Navbar />
         { show ? <OTPInput  email={email} setShow={setShow}/> : (
           <main className="grid min-h-full place-items-center bg-white sm:py-32 lg:px-8">
           <div className="text-center space-y-6 flex flex-col">

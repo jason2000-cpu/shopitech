@@ -1,9 +1,10 @@
 'use client'
 
-import React from 'react'
-import Floatbanner from './floatbanner'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 
+import { AppContext } from '@/Context/AppContext';
+import Floatbanner from './floatbanner'
 import Dropdown from '../Dropdown/Dropdown';
 
 // icons
@@ -38,9 +39,11 @@ const NavLinks = [
 ]
 function Navbar() {
     // console.log(context.cartItems)
+    const { cart } = useContext(AppContext)
+    // console.log("NAVBAR CART CONTEXT:::::", AppContext.Provider);
+    // const { cart } = useCart();
 
-    const { cart } = useCart();
-    console.log("CART ITEMS FROM NAVBAR::::", cart);
+    console.log("CART FROM LOCAL STORAGE::::", cart.length);
   return (
     <div className='fixed z-10 bg-white w-[100vw] top-0 left-0'>
         <Floatbanner />
@@ -70,7 +73,7 @@ function Navbar() {
                     <div className='cursor-pointer'>
                         <Link href='/Cart'>
                             <HiOutlineShoppingCart size={30}/>
-                            <span className='absolute top-10 right-20 bg-[#db4444] border rounded-full h-4 w-4 p-[.6rem]  flex justify-center items-center text-white'>{cart.length}</span>
+                            <span className='absolute top-10 right-20 bg-[#db4444] border rounded-full h-4 w-4 p-[.6rem]  flex justify-center items-center text-white'>{cart?.length}</span>
                         </Link>
                     </div>
                     <Dropdown />

@@ -16,8 +16,8 @@ function useProductRest() {
                 await fetch('/api/products')
                 .then(res => res.json())
                 .then(json =>{
-                    console.log("JSON OUTPUT:::::",json);
                     setProducts(json);
+                    console.log("PRODUCTS FROM USE-EFFECT", products);
                     setLoading(false);
                 })
             } catch (error) {
@@ -29,9 +29,8 @@ function useProductRest() {
         getProducts();
         
     }, [])
-    
 
-    console.log(products);
+    
     return {products, productsLoading};
 }
 
