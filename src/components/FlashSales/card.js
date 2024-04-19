@@ -8,12 +8,13 @@ import { ImStarHalf } from "react-icons/im"
 import useCart from '@/Hooks/useCart';
 import useProductRest from '@/Hooks/useProductRest';
 import { AppContext } from '@/Context/AppContext';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 function Card({ item }) {
     const appContext = useContext(AppContext);
     const { addToCart } = appContext;
-
+    
   return (
     <div className='w-72 border rounded-xl mx-4'>
         <div className='bg-gray-100 p-2'>

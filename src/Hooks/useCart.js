@@ -2,6 +2,9 @@
 
 import React, { useState, useEffect, useId } from 'react';
 
+import { toast } from 'react-toastify';
+
+
 
 function useCart(){
     const [cart, setCart] = useState([]);
@@ -27,10 +30,10 @@ function useCart(){
     const addToCart = (item)=>{
         const checkExist  = cart.filter((cartItem) => cartItem.id === item.id)
         if (checkExist != false){
-          alert(`${item.name} Already exists`)
+          toast.error(`${item.name} Already Exists`)
         } else {
           setCart((prevCart) => [...prevCart, item])
-          alert(`${item.name} added to Cart. New Length::`, cart.length)
+          toast.success("Success Notification !");
         }
       }
 

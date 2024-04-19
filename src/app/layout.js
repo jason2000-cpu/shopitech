@@ -4,6 +4,9 @@ import "./globals.css";
 import AppContextProvider from '@/Context/AppContext';
 import Navbar from "@/components/NavBar/navbar";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,6 +19,7 @@ export default function RootLayout({ children }) {
     <AppContextProvider>
           <html lang="en">
               <body className={inter.className}>
+                  <ToastContainer />
                   <Navbar />
                   {children}
               </body>
